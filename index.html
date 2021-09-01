@@ -7,19 +7,27 @@
  <title>Book Archive</title>
  <!-- bootstrap stylesheet -->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+ <!-- css -->
+ <link rel="stylesheet" href="./style.css">
 </head>
 <body>
- <main class="mx-auto">
+ <main class="mx-auto p-3">
   <!-- search field -->
  <section class="my-5 container">
- <h1 class="text-center">Search Your book</h1>
+ <h1 class="text-center text-capitalize">Search Your book</h1>
  <div class="input-group my-3 mx-auto w-50 rounded">
   <input id="search-field" type="text" class="form-control" placeholder="search book" aria-label="Recipient's username" aria-describedby="button-addon2">
   <button onclick="searchBook()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+ </div>
+ <!-- spinner -->
+ <div class="d-flex justify-content-center">
+  <div id="spinner" class="spinner-border text-success" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
 </div>
  </section>
  <!-- search result -->
- <section id="books container">
+ <section id="books">
  <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
 </div>
 <div id="book-found">
